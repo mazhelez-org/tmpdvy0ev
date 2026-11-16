@@ -1,0 +1,30 @@
+{
+  "githubRunner": "ubuntu-latest",
+  "runs-on": "ubuntu-latest",
+  "conditionalSettings": [
+    {
+      "workflows": [
+        "CI/CD"
+      ],
+      "settings": {
+        "workflowConcurrency": [
+          "group: ${{ github.workflow }}-${{ github.ref }}",
+          "cancel-in-progress: true"
+        ]
+      }
+    }
+  ],
+  "useApproximateVersion": true,
+  "type": "PTE",
+  "incrementalBuilds": {
+    "onPush": true
+  },
+  "MicrosoftTelemetryConnectionString": "",
+  "$schema": "https://raw.githubusercontent.com/mazhelez-org/AL-Go/bf247f662e430b260701b13b6953849e0b2448a0/Actions/.Modules/settings.schema.json",
+  "shell": "pwsh",
+  "useCompilerFolder": true,
+  "doNotPublishApps": true,
+  "githubRunnerShell": "pwsh",
+  "templateUrl": "https://github.com/mazhelez-org/tmp3N4tJJ-PTE@main",
+  "UseProjectDependencies": true
+}
